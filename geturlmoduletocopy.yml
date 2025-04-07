@@ -1,0 +1,5 @@
+- name: test php page is installed
+  get_url:
+    url: "http://materials.example.com/labs/playbook-review/index.php"
+    dest: /var/www/html/index.php
+    mode: 0644

@@ -1,0 +1,14 @@
+---
+- name: Install http packages
+  hosts: servera.lab.example.com
+  become: yes
+  tasks:
+    - name: Install httpd packages
+      yum:
+         name: httpd
+         state: latest
+    - name: start the http service
+      service: 
+        name: httpd
+        state: started
+        enabled: true       

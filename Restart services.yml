@@ -1,0 +1,10 @@
+---
+- name: start and enable service
+  hosts: servera.lab.example.com
+  become: yes
+  tasks:  
+    - name: start and enable Firewalld service
+      service: 
+         name: Firewalld
+         state: started
+         enabled: true  

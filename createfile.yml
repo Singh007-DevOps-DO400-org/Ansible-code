@@ -1,0 +1,11 @@
+---
+- name: create file on servera.lab.example.com
+  hosts: servera.lab.example.com
+  become: yes
+  tasks: 
+     - name: Create file in /tmp folder
+       file: 
+          path: /tmp/newfile.txt
+          owner: root
+          group: root
+          mode: '0644'

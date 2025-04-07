@@ -1,0 +1,9 @@
+---
+- name: copying file source to target
+  hosts: servera.lab.example.com
+  become: yes
+  tasks:
+    - name: copying file 
+      copy:
+      src: files/opt/
+      dest: /tmp/optfiledetails.txt
